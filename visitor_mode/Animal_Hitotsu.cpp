@@ -1,9 +1,10 @@
+// Raw version
+
 #include <stdio.h>
 
 class Animal {
 public:
-    // Add virtual modifier
-    virtual void speak()
+    void speak()
     {
         printf("emm... \n");
     }
@@ -42,10 +43,10 @@ public:
 };
 
 int main() {
-    Animal *a = new Dog();
-    Animal *b = new Cat();
-    Animal *c = new Fox();
-    Speaker *s = new Speaker();
+    Animal* a = new Dog();
+    Animal* b = new Cat();
+    Animal* c = new Fox();
+    Speaker* s = new Speaker();
     s->speak(a);
     s->speak(b);
     s->speak(c);

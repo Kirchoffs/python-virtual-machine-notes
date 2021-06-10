@@ -1,3 +1,5 @@
+// Visitor mode
+
 #include <stdio.h>
 
 class Speaker;
@@ -30,14 +32,14 @@ public:
     }
 };
 
-void Animal::accept(Speaker *v) {
+void Animal::accept(Speaker* v) {
     v->visit(this);
 }
 
 
 class Dog: public Animal {
 public:
-    void accept(Speaker *v) {
+    void accept(Speaker* v) {
         v->visit(this);
     }
 };
@@ -57,7 +59,7 @@ public:
 
 class Cat: public Animal {
 public:
-    void accept(Speaker *v) {
+    void accept(Speaker* v) {
         v->visit(this);
     }
 };
@@ -65,16 +67,16 @@ public:
 
 class Fox: public Animal {
 public:
-    void accept(Speaker *v) {
+    void accept(Speaker* v) {
         v->visit(this);
     }
 };
 
 int main() {
-    Animal *a = new Dog();
-    Animal *b = new Cat();
-    Animal *c = new Fox();
-    Speaker *s = new Speaker();
+    Animal* a = new Dog();
+    Animal* b = new Cat();
+    Animal* c = new Fox();
+    Speaker* s = new Speaker();
     s->visit(a);
     s->visit(b);
     s->visit(c);
