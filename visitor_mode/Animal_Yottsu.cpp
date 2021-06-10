@@ -49,7 +49,7 @@ public:
         cout << "Meow..." << endl;
     }
 
-    virtual void visit(Fox* pd) {
+    virtual void visit(Fox* pf) {
         cout << "Owooooo..." << endl;
     }
 };
@@ -68,7 +68,7 @@ public:
         cout << "Fish..." << endl;
     }
 
-    virtual void visit(Fox* pd) {
+    virtual void visit(Fox* pf) {
         cout << "Pork..." << endl;
     }
 };

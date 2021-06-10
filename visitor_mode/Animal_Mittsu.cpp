@@ -33,6 +33,7 @@ public:
 };
 
 void Animal::accept(Speaker* v) {
+    // this refers to Animal pointer
     v->visit(this);
 }
 
@@ -40,6 +41,7 @@ void Animal::accept(Speaker* v) {
 class Dog: public Animal {
 public:
     void accept(Speaker* v) {
+        // this refers to Dog pointer
         v->visit(this);
     }
 };
